@@ -15,6 +15,17 @@ void setup() {
 
 void draw() {
   drawBars();
+
+float temp = 0;
+
+for (int i = 0; i < numbers.length - 1; i++){
+
+    if (numbers[i] > numbers[i + 1]) {
+      temp = numbers[i];
+      numbers[i] = numbers[i + 1];
+      numbers[i+1] = temp;
+    }
+}
   
   // sorting algorithm here (just one step)
 }

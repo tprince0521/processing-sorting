@@ -13,13 +13,25 @@ void setup() {
   // print(Arrays.toString(numbers));
 }
 
+int i = 1;
+int j = 0;
+float key;
+
 void draw() {
   drawBars();
 
-  
- 
-  
-  // sorting algorithm here (just one step)
+  if (i < numbers.length) {
+    key = numbers[i];
+    j = i - 1;
+
+    while (j >= 0 && numbers[j] > key) {
+      numbers[j + 1] = numbers[j];
+      j--;
+    }
+
+    numbers[j + 1] = key;
+    i++;
+  }
 }
 
 void drawBars() {
